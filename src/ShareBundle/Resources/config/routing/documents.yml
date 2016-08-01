@@ -1,0 +1,24 @@
+documents_index:
+    path:     /
+    defaults: { _controller: "ShareBundle:Documents:index" }
+    methods:  GET
+
+documents_show:
+    path:     /{id}/show
+    defaults: { _controller: "ShareBundle:Documents:show" }
+    methods:  GET
+
+documents_new:
+    path:     /new
+    defaults: { _controller: "ShareBundle:Documents:new" }
+    methods:  [GET, POST]
+
+documents_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ShareBundle:Documents:edit" }
+    methods:  [GET, POST]
+
+documents_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ShareBundle:Documents:delete" }
+    methods:  DELETE

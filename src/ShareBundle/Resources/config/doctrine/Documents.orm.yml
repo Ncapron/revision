@@ -1,0 +1,32 @@
+ShareBundle\Entity\Documents:
+    type: entity
+    table: null
+    repositoryClass: ShareBundle\Repository\DocumentsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titre:
+            type: string
+            length: 255
+        description:
+            type: string
+            length: 255
+        fichier:
+            type: string
+            length: 255
+        datePublication:
+            type: date
+            column: date_publication
+        dateModif:
+            type: datetime
+            column: date_modif
+            nullable: true
+    lifecycleCallbacks: {  }
+
+    manyToOne:
+        user:
+            targetEntity: UserBundle\Entity\User

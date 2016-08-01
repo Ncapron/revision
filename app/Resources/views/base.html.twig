@@ -9,9 +9,21 @@
             <!-- Materialize CSS -->
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
             <link rel="stylesheet" href="{{ asset('bundles/user/css/style.css') }}">
+            <link rel="stylesheet" href="{{ asset('bundles/share/css/style.css') }}">
         {% endblock %}
     </head>
     <body>
+
+    <!-- Menu -->
+    <nav>
+        <div class="nav-wrapper nav-top">
+            <a href="{{ path ('share_homepage') }}" class="brand-logo"><img src="https://avatars1.githubusercontent.com/u/8874047?v=3&s=200"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="{{ path ('fos_user_profile_show') }}">User</a></li>
+                <li><a href="{{ path ('documents_index') }}">Documents</a></li>
+            </ul>
+        </div>
+    </nav>
         {% block body %}
 
         {% endblock %}
